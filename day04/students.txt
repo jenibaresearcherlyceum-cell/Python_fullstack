@@ -1,0 +1,2 @@
+Name: Jeni, Course: Cse, Marks: 450
+Name: Kavi, Course: EEE, Marks: 470
