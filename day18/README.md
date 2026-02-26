@@ -39,13 +39,14 @@ Architecture Concept
     - JSON request & response structure
 
 HTTP Method Mapping
-
-Operation   	HTTP Method
-View Employees	GET
-Add Employee	POST
-Update Task	    PUT
-Delete Employee	DELETE
-
+-----------------------------------
+| Operation   	    | HTTP Method |
+-----------------------------------
+| View Employees	| GET         |
+| Add Employee	    | POST        |
+| Update Task	    | PUT         |
+| Delete Employee	| DELETE      |
+-----------------------------------
 API Simulation Design
 
     The file api_simulation.py simulates backend endpoints using Python functions:
@@ -89,5 +90,6 @@ Limitations
 - This is a simulation (not a live server).
 
 - No real HTTP requests implemented.
+
 
 - No authentication or security layer.
