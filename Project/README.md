@@ -254,4 +254,101 @@ The system supports role-based access control, secure JSON data handling, loggin
 
 -Core functionality frozen for final submission.
 
+# Day 12 – Migration from JSON to SQLite Database
+
+  -Replaced JSON-based storage with SQLite database integration
+
+  -Created centralized database.py to handle DB connection and table creation
+
+  -Implemented automatic table initialization for employees and tasks
+
+  -Replaced file handler logic with INSERT and SELECT database operations
+
+  -Updated employee module to use database queries for add and view operations
+
+  -Updated task module to support INSERT, UPDATE, and SELECT queries
+
+  -Completely removed JSON dependency (employees.json, tasks.json)
+
+  -Ensured full data persistence after program restart
+
+  -Project successfully transitioned to database-driven architecture
+
+# Day 13 – Database Abstraction Layer (DAL) Implementation
+
+  -Centralized all SQL queries inside database.py
+
+  -Removed SQL statements from employee.py, task.py, and main.py
+
+  -Introduced clean Data Access Layer structure
+
+  -Optional service layer introduced for validation and business rules
+
+  -Established structured flow: main → service → database → SQLite
+
+  -Implemented safe connection handling using context manager with (sqlite3.connect)
+
+  -Improved maintainability and separation of concerns
+
+  -Verified full system functionality after architecture refactor
+
+# Day 14 – API Style Architecture Preparation
+
+  -Converted system logic to API-style structure
+
+  -Defined and documented REST-style endpoints in README
+
+  -Introduced controller layer for request handling
+
+  -Shifted flow to: main → controller → service → database
+
+  -Standardized response format for all operations (success/error structure)
+
+  -Implemented structured error handling mechanism
+
+  -Maintained console menu compatibility during backend preparation
+
+  -Backend successfully decoupled from UI layer
+
+# Day 15 – Flask Integration & API Server Initialization
+
+  -Installed and configured Flask within project environment
+
+  -Created app.py as backend entry point
+
+  -Initialized Flask application and root route
+
+  -Connected controllers to Flask routes
+
+  -Implemented first live GET API endpoint
+
+  -Implemented POST API using request.json for data handling
+
+  -Successfully started local Flask server
+
+  -Verified API endpoints via browser/Postman
+
+  -Preserved existing console-based system during transition
+
+# Day 16 – Full REST API Implementation & Testing
+
+  -Implemented complete CRUD APIs for Employees
+
+  -Implemented complete CRUD APIs for Tasks
+
+  -Integrated request handling using request.json
+
+  -Standardized API response structure (status, message, data)
+
+  -Implemented proper HTTP status codes (200, 201, 400, 404, etc.)
+
+  -Applied safe delete logic where required
+
+  -Completed structured error handling for invalid inputs and missing records
+
+  -Conducted full endpoint testing using Postman (GET, POST, PUT, DELETE)
+
+  -Achieved fully functional backend API service architecture
+
+
 
