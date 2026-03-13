@@ -350,5 +350,31 @@ The system supports role-based access control, secure JSON data handling, loggin
 
   -Achieved fully functional backend API service architecture
 
+# DAY 17 — AUTHENTICATION SYSTEM & PASSWORD SECURITY
+
+- Installed bcrypt for secure password hashing
+  
+- Implemented password hashing during user registration
+  
+- Added password verification during login process
+  
+- Ensured passwords are stored as hashed values in database
+  
+- Verified no plain text passwords stored
+  
+- Prevented passwords from appearing in API responses
+  
+- Confirmed passwords are not printed in system logs
+  
+- Implemented basic API protection using login state
+  
+- Restricted sensitive endpoints from unauthorized access
+
+# Security Verification:
+- Database shows hashed passwords (60 bytes bcrypt hash)
+  
+- Logs do not expose password values
+  
+- API responses do not contain password fields
 
 
