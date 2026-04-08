@@ -1,0 +1,19 @@
+class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def calculate_area(self):
+        return self.length * self.width
+
+#calculation
+def main():
+    rect = Rectangle(10, 5)
+
+    area = rect.calculate_area()
+
+    print("Area is:", area)
+
+
+if __name__ == "__main__":
+    main()
