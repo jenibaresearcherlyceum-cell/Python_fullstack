@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class Rectangle:
     def __init__(self, length, width):
         self.length = length
@@ -17,3 +18,24 @@ def main():
 
 if __name__ == "__main__":
     main()
+=======
+class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def calculate_area(self):
+        return self.length * self.width
+
+#calculation
+def main():
+    rect = Rectangle(10, 5)
+
+    area = rect.calculate_area()
+
+    print("Area is:", area)
+
+
+if __name__ == "__main__":
+    main()
+>>>>>>> 22031014cf25f8636d0293228d2970b67ec231f8

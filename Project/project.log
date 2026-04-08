@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2026-02-18 10:34:08,566 - INFO - Testing log file creation
 2026-02-18 10:34:30,490 - INFO - Login success for user: admin with role: Admin
 2026-02-18 10:37:13,720 - WARNING - Employee 101 marked inactive (soft delete)
@@ -15,3 +16,22 @@
 2026-02-25 10:51:00,636 - INFO - Task added
 2026-02-25 10:52:12,317 - INFO - Task added
 2026-02-25 10:52:57,443 - INFO - Task updated
+=======
+2026-02-18 10:34:08,566 - INFO - Testing log file creation
+2026-02-18 10:34:30,490 - INFO - Login success for user: admin with role: Admin
+2026-02-18 10:37:13,720 - WARNING - Employee 101 marked inactive (soft delete)
+2026-02-18 10:38:00,460 - INFO - Task 51 updated to completed
+2026-02-18 10:38:27,177 - INFO - Admin accessed system dashboard
+2026-02-20 16:17:29,783 - INFO - Login success for user: admin with role: Admin
+2026-02-20 16:17:29,783 - INFO - admin logged in as Admin
+2026-02-20 16:18:11,314 - INFO - Employee 102 added
+2026-02-20 16:18:28,019 - WARNING - Employee 102 marked inactive
+2026-02-25 10:47:10,571 - WARNING - Failed login attempt for username: admin
+2026-02-25 10:47:46,450 - WARNING - Failed login attempt for username: admin
+2026-02-25 10:48:00,843 - INFO - Login success for user: admin with role: Admin
+2026-02-25 10:48:40,112 - INFO - Employee added
+2026-02-25 10:49:39,687 - INFO - Employee added
+2026-02-25 10:51:00,636 - INFO - Task added
+2026-02-25 10:52:12,317 - INFO - Task added
+2026-02-25 10:52:57,443 - INFO - Task updated
+>>>>>>> 22031014cf25f8636d0293228d2970b67ec231f8
