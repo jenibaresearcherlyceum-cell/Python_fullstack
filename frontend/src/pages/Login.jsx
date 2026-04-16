@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Notification from "../components/Notification";
-import BASE_URL from "../services/api";
+import { BASE_URL } from "../services/api";
 
 function Login({ onLogin }) {
   const [formData, setFormData] = useState({
