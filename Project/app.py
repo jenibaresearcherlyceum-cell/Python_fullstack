@@ -33,7 +33,7 @@ from auth_middleware import verify_token
 
 app = Flask(__name__)
 
-CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}})
+CORS(app, resources={r"/*": {"origins": ["http://localhost:5173", "https://python-fullstack-snowy.vercel.app", "*"]}})
 
 SECRET_KEY = os.getenv("SECRET_KEY", "mysecretkey")
 
