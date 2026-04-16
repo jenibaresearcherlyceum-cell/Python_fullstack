@@ -96,6 +96,27 @@ def update_task(task_id, data):
     return updated > 0
 
 
+# UPDATE TASK STATUS (USER ONLY)
+def update_task_status(task_id, status):
+    if not status:
+        return False
+        
+    conn = sqlite3.connect(database.DB_NAME)
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        UPDATE tasks
+        SET status = ?
+        WHERE task_id = ?
+    """, (status, task_id))
+
+    conn.commit()
+    updated = cursor.rowcount
+    conn.close()
+
+    return updated > 0
+
+
 # DELETE TASK
 def delete_task(task_id):
     conn = sqlite3.connect(database.DB_NAME)

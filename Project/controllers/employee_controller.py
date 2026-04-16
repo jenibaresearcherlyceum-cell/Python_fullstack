@@ -17,7 +17,6 @@ def add_employee_controller(emp_id, name, department, designation):
     }
 
     
-
     # VALIDATION
     error = validate_employee(data)
     if error:
@@ -53,7 +52,7 @@ def view_employees_controller():
 
     try:
         page = int(request.args.get("page", 1))
-        limit = int(request.args.get("limit", 5))
+        limit = int(request.args.get("limit", 50))
         department = request.args.get("department")
         search = request.args.get("search")
         sort_by = request.args.get("sort_by", "emp_id")

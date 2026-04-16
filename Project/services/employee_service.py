@@ -29,9 +29,9 @@ def view_employees(page, limit, department=None, search=None, sort_by="emp_id", 
 
     offset = (page - 1) * limit
 
+    #  fetch all employees (active + inactive)
     query = "SELECT * FROM employees WHERE is_active = 1"
     count_query = "SELECT COUNT(*) FROM employees WHERE is_active = 1"
-
     params = []
     count_params = []
 
@@ -50,7 +50,7 @@ def view_employees(page, limit, department=None, search=None, sort_by="emp_id", 
         params.append(department)
         count_params.append(department)
 
-    # PAGINATION
+    # SORT + PAGINATION
     query += f" ORDER BY {sort_by} {order.upper()} LIMIT ? OFFSET ?"
     params.extend([limit, offset])
 

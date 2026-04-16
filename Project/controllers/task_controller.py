@@ -86,8 +86,11 @@ def view_tasks_controller():
     }
 
 # UPDATE
-def update_task_controller(task_id, data):
-    updated = task_service.update_task(task_id, data)
+def update_task_controller(task_id, data, role="admin"):
+    if role == "user":
+        updated = task_service.update_task_status(task_id, data.get("status"))
+    else:
+        updated = task_service.update_task(task_id, data)
 
     if not updated:
         return {

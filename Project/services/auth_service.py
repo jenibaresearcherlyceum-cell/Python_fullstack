@@ -4,7 +4,10 @@ from database import DB_NAME
 
 
 def register_user(username, password, role):
-    hashed = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
+    hashed = bcrypt.hashpw(
+        password.encode("utf-8"),
+        bcrypt.gensalt()
+    ).decode("utf-8") 
 
     with sqlite3.connect(DB_NAME) as conn:
         cursor = conn.cursor()
@@ -28,6 +31,12 @@ def login_user(username, password):
 
         stored_password, role = user
 
-        if bcrypt.checkpw(password.encode('utf-8'), stored_password):
+        stored_password_bytes = stored_password.encode("utf-8") if isinstance(stored_password, str) else stored_password
+
+        if bcrypt.checkpw(
+            password.encode("utf-8"),
+            stored_password_bytes
+        ):
             return role
+
         return None
